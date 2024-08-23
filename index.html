@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-  <meta charset="UTF-8" data-theme="light">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google-font-CDN-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +13,16 @@
   <!-- Tailwind-css and DaisyUI CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- css -->
-  <link rel="stylesheet" href="style.css">
   <style>
     .font-family {
       font-family: Manrope;
+    }
+
+    .bg-cover {
+      background-image: url(./assets/bg.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   </style>
   <title>HomeDSGN</title>
@@ -47,14 +52,16 @@
         </div>
         <div class="navbar-end flex space-x-5">
           <div class="flex gap-5 font-semibold">
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class=" lg:block hidden"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class=" lg:block hidden"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
-          <button class="btn bg-lime-300 rounded-[32px] lg:block hidden ">
-            <a class="font-extrabold">Book Consult</a>
-            <span class="bg-black rounded-[32px] px-1 text-1xl "><i
-                class="fa-solid fa-arrow-right -rotate-45 text-white"></i></span>
-          </button>
+          <div class="btn lg:bg-lime-300 rounded-[32px] flex items-center">
+            <a class="font-extrabold  lg:block hidden">Book Consult
+              <span class="bg-black rounded-[32px] px-1 text-1xl"><i
+                  class="fa-solid fa-arrow-right -rotate-45 text-white"></i></span>
+            </a>
+
+          </div>
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <i class="fa-solid fa-bars"></i>
@@ -100,10 +107,10 @@
     <!-- commercial section starts -->
     <section class="w-11/12 mx-auto">
       <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="mb-4 md:mb-0">
+        <div class="mb-4 md:mb-0 hidden lg:flex">
           <img src="./assets/Vector.png" alt="">
           <button
-            class="mt-2 md:ml-40 text-lg md:text-2xl md:text-center text-gray-600 bg-white rounded-[32px] px-2 py-1">
+            class="ml-1 mt-10 text-lg md:text-2xl md:text-center text-gray-600 bg-white rounded-[32px] px-2 py-1 hidden lg:flex items-center font-bold">
             <i class="fa-solid fa-arrow-right"></i> About Us
           </button>
         </div>
@@ -142,7 +149,7 @@
     <section class="w-11/12 mx-auto">
       <div class="mt-20 flex lg:flex-col items-center text-center">
         <div>
-          <button class="text-lg md:text-2xl md:text-center text-bold bg-white rounded-[32px] px-2 py-1 leading-5">
+          <button class="text-lg md:text-2xl md:text-center font-bold bg-white rounded-[32px] px-2 py-1 leading-5">
             <i class="fa-solid fa-arrow-right"></i> How We Works
           </button>
           <div class="leading-8 mt-7">
@@ -272,6 +279,52 @@
 
   </section>
 
+  <!-- Our latest projects challenge part -->
+  <section class="w-full bg-black mt-20 pb-10">
+    <div class="text-center text-white pt-8">
+      <h4 class="text-7xl font-bold">Our Latest Blog</h4>
+      <p class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, quo?</p>
+    </div>
+    <div class="w-11/12 mx-auto  mt-10">
+      <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 ">
+        <div class="">
+          <img class="w-full" class="" src="./assets/h1.jpg" alt="">
+          <div class="pl-5 pt-5  bg-gradient-to-b to-green-700 from-green-950">
+            <h1 class="text-white text-3xl font-bold mb-5">DIY Home Office Makeover</h1>
+            <p class=" mb-5 text-gray-300">ransform a spare room or a corner of your home into a
+              functional and inspiring home office. Focus on ergonomic furniture, adequate lighting, and personal
+              touches like artwork or plants. This project can improve productivity and make remote work more enjoyable.
+            </p>
+            <button class="btn bg-black font-bold hover:text-red-600 text-white mb-9">Learn More</button>
+          </div>
+        </div>
+        <div class="">
+          <img class="" class="" src="./assets/h2.jpg" alt="">
+          <div class="pl-5 pt-5  bg-gradient-to-b to-green-700 from-green-950">
+            <h1 class="text-white text-3xl font-bold mb-5">Building a Custom Closet</h1>
+            <p class=" mb-5 text-gray-300">ransform a spare room or a corner of your home into a
+              functional and inspiring home office. Focus on ergonomic furniture, adequate lighting, and personal
+              touches like artwork or plants. This project can improve productivity and make remote work more enjoyable.
+            </p>
+            <button class="btn bg-black font-bold hover:text-red-600 text-white mb-7">Learn More</button>
+          </div>
+        </div>
+        <div class="">
+          <img class="w-full" class="" src="./assets/h3.jpg" alt="">
+          <div class="pl-5 pt-5  bg-gradient-to-b to-green-700 from-green-950">
+            <h1 class="text-white text-3xl font-bold mb-5">Kitchen Cabinet Refacing</h1>
+            <p class=" mb-5 text-gray-300">ransform a spare room or a corner of your home into a
+              functional and inspiring home office. Focus on ergonomic furniture, adequate lighting, and personal
+              touches like artwork or plants. This project can improve productivity and make remote work more enjoyable.
+            </p>
+            <button class="btn bg-black font-bold hover:text-red-600 text-white mb-7">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
   <!-- next prroject discuss section -->
   <section class="bg-cover w-full  mt-16">
     <div class="w-11/12 mx-auto">
@@ -319,20 +372,22 @@
         <span class="bg-lime-300 rounded-full px-2 text-3xl"><i
             class="fa-solid fa-arrow-right -rotate-45 mt-40"></i></span>
         <a href="#" class="text-4xl text-white font-bold">Rinterio</a>
-        <p class="text-gray-400">The barn house captivates with its blend of rustic charm and modern sophistication, <br>featuring weathered
-          wood, sleek metal accents.</p>
+        <p class="text-gray-400">The barn house captivates with its blend of rustic charm and modern sophistication,
+          <br>featuring weathered
+          wood, sleek metal accents.
+        </p>
       </div>
 
     </div>
-      <div class="flex justify-evenly lg:flex-row flex-col items-center mt-10">
-        <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Home</p>
-        <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Service</p>
-        <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Portfolio</p>
-        <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Blogs</p>
-        <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Contact US</p>
-      </div>
+    <div class="flex justify-evenly lg:flex-row flex-col items-center mt-10">
+      <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Home</p>
+      <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Service</p>
+      <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Portfolio</p>
+      <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Blogs</p>
+      <p class="text-gray-500 font-bold hover:text-lime-400 duration-300 ease-in-out cursor-pointer">Contact US</p>
+    </div>
 
-      
+
     <div class="text-center mt-5">
       <span class="btn bg-lime-300 rounded-[32px]">
         <a class="font-extrabold">Book Consult</a>
